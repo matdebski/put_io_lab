@@ -50,10 +50,14 @@ Osoba chcąca zakupić produkt na aukcji.
 
 [Sprzedający](#ac1):
 * [UC1](#uc1): Wystawienie produktu na aukcję
-* ...
+* [UC2](#uc2): Rezerwacja terminu odbioru paczki
+
 
 [Kupujący](#ac2)
-* ...
+* [UC3](#uc1): Przebicie aktualnej oferty
+* [BR2](#br2): Wygranie aukcji
+* [UC4](#uc2): Przekazanie środków
+
 
 ---
 <a id="uc1"></a>
@@ -77,19 +81,25 @@ Osoba chcąca zakupić produkt na aukcji.
 ---
 
 <a id="uc2"></a>
-### UC2: ...
+### UC2: Rezerwacja terminu odbioru
 
-**Aktorzy:** [Sprzedający](#ac1), [Kupujący](#ac2), ...
+**Aktorzy:** [Sprzedający](#ac1)
 
 **Scenariusz główny:**
-1. ...
+1. [Sprzedający](#ac1) zgłasza do systemu chęć przekazania towaru zwycięscy aukcji [Kupujący]
+2. System sprawdza czy kupujący 
+zapłacił za produkt.
+3. System proponuje date odbioru paczki
+4. [Sprzedający] akceptuje date
+5. System rezerwuje termin odbioru
 
 **Scenariusze alternatywne:** 
 
-1.A. ...
-* 4.A.1. ...
-
----
+2.A. Aukcja nie jest opłacona
+* 2.A.1. System prosi [Sprzedający]
+    żeby spróbował później.
+4.A. Sprzedający nie akceptuje oferty.
+* 4.A.1. System proponuje inny termin
 
 ## Obiewkty biznesowe (inaczje obiekty dziedzinowe lub informatycjne)
 
